@@ -7,12 +7,12 @@ namespace RestService
 {
     public class MapBoxService
     {
-        private string _baseUrl = "https://api.mapbox.com/geocoding/v5/";
+        private string _baseUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places/";
         public string MakeCall(string searchAddress, string apiToken)
         {
             var encodedAddress = HttpUtility.UrlEncode(searchAddress);
             
-            var request = WebRequest.CreateHttp($"{_baseUrl}{encodedAddress}");
+            var request = WebRequest.CreateHttp($"{_baseUrl}{encodedAddress}.json?access_token={apiToken}");
 
             HttpWebResponse response = null;
             
