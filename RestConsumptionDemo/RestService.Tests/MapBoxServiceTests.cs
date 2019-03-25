@@ -13,5 +13,16 @@ namespace RestService.Tests
             
             apiService.ShouldNotBeNull();
         }
+
+        [Fact]
+        public void WhenMakingCallWithoutTokenReturnsUnauthorizedStatus()
+        {
+            var apiService = new MapBoxService();
+            var searchValue = "580 N Fourth Street Columbus OH";
+
+            var result = apiService.MakeCall(searchValue, string.Empty);
+            
+            result.ShouldBe("The remote server returned an error: (401) Unauthorized.");
+        }
     }
 }
