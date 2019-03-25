@@ -32,7 +32,7 @@ public class MapBoxServiceTests {
 
     @Test
     public void whenMakingCallBadAddressReturnsUnauthorized() throws IOException {
-        String apiToken = "pk.eyJ1Ijoiam9obmF0cGlsbGFyIiwiYSI6ImNqdG9nZTd2bTA3dmEzeW1yOHd0MG0zYWkifQ.27oEPRXBIcsInc5zmcGpHA";
+        String apiToken = DevSettings.ApiKey;
 
         String result = _mapBox.MakeCall("", apiToken);
 
@@ -42,7 +42,7 @@ public class MapBoxServiceTests {
     @Test
     public void whenMakingCallWithTokenGoodAddressReturnsJsonArray() throws IOException {
         String searchCode = "580 N Fourth Street Columbus OH";
-        String apiToken = "pk.eyJ1Ijoiam9obmF0cGlsbGFyIiwiYSI6ImNqdG9nZTd2bTA3dmEzeW1yOHd0MG0zYWkifQ.27oEPRXBIcsInc5zmcGpHA";
+        String apiToken = DevSettings.ApiKey;
 
         String result = _mapBox.MakeCall(searchCode, apiToken);
 

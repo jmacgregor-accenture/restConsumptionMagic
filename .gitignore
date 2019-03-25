@@ -15,7 +15,7 @@
 
 # Development Configuration
 appsettings.Development.json
-DevSettings.cs
+DevSettings*
 
 # Node items
 **/node_modules
