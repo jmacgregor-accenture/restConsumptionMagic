@@ -30,8 +30,7 @@ namespace RestService.Tests
         {
             var apiService = new MapBoxService();
             var searchValue = "580 N Fourth Street Columbus OH";
-            var token =
-                "pk.eyJ1Ijoiam9obmF0cGlsbGFyIiwiYSI6ImNqdG9nZTd2bTA3dmEzeW1yOHd0MG0zYWkifQ.27oEPRXBIcsInc5zmcGpHA";
+            var token = DevSettings.ApiKey;
 
             var result = apiService.MakeCall(searchValue, token);
             
