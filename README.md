@@ -19,3 +19,9 @@ public final class DevSettings {
     public static final String ApiKey = "{yourMapBoxKey}";
 }
 ```
+
+# Next Steps:
+## Practice deserializing the results from the json string to a Java or C# object
+
+## Use a library to make calls easier to write
+Looking into Restsharp for C# (use Nuget) or RestEasy for Java (https://resteasy.github.io/)
